@@ -1,5 +1,5 @@
 <template>
-    <table v-if="treeData.name">
+    <table v-if="treeData.name" class="treeTableClass">
       <tr>
         <td :colspan="Array.isArray(treeData.children) ? treeData.children.length * 2 : 1" 
           :class="{parentLevel: Array.isArray(treeData.children) && treeData.children.length, extend: Array.isArray(treeData.children) && treeData.children.length && treeData.extend}"
@@ -76,9 +76,10 @@ export default {
 
 <style scoped>
 table{border-collapse: separate!important;border-spacing: 0!important;}
+table.treeTableClass{margin: 0 auto;}
 td{position: relative; vertical-align: top;padding:0 0 50px 0;text-align: center; }
 
-.extend_handle{position: absolute;left:50%;bottom:30px; width:10px;height: 10px;padding:10px;transform: translate3d(-15px,0,0);cursor: pointer;}
+.extend_handle{position: absolute;left:50%;bottom:30px; width:10px;height: 10px;padding:10px;transform: translate3d(-8px,0,0);cursor: pointer;}
 .extend_handle:before{content:""; display: block; width:100%;height: 100%;box-sizing: border-box; border:2px solid;border-color:#ccc #ccc transparent transparent;
 transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform ease 300ms;}
 .extend_handle:hover:before{border-color:#333 #333 transparent transparent;}
@@ -87,9 +88,15 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .extend::after{content: "";position: absolute;left:50%;bottom:15px;height:15px;border-left:2px solid #ccc;transform: translate3d(-1px,0,0)}
 .childLevel::before{content: "";position: absolute;left:50%;bottom:100%;height:15px;border-left:2px solid #ccc;transform: translate3d(-1px,0,0)}
 .childLevel::after{content: "";position: absolute;left:0;right:0;top:-15px;border-top:2px solid #ccc;}
-.childLevel:first-child:before, .childLevel:last-child:before{display: none;}
-.childLevel:first-child:after{left:50%;height:15px; border:2px solid;border-color:#ccc transparent transparent #ccc;border-radius: 6px 0 0 0;transform: translate3d(1px,0,0)}
+/* .childLevel:first-child:before, .childLevel:last-child:before{display: none;}
+ */
+ .childLevel:first-child:after{left:50%;height:15px; border:2px solid;border-color:#ccc transparent transparent #ccc;border-radius: 6px 0 0 0;transform: translate3d(1px,0,0)}
 .childLevel:last-child:after{right:50%;height:15px; border:2px solid;border-color:#ccc #ccc transparent transparent;border-radius: 0 6px 0 0;transform: translate3d(-1px,0,0)}
+
+.childLevel:first-child:before{left:50%;height:15px; border:2px solid;border-color:#ccc transparent transparent #ccc;border-radius: 6px 0 0 0;transform: translate3d(1px,0,0)}
+.childLevel:last-child:before{right:50%;height:15px; border:2px solid;border-color:#ccc #ccc transparent transparent;border-radius: 0 6px 0 0;transform: translate3d(-1px,0,0)}
+
+
 .childLevel:first-child.childLevel:last-child::after{left:auto;border-radius: 0;border-color:transparent #ccc transparent transparent;transform: translate3d(1px,0,0)}
 
 .node{position: relative; display: inline-block;margin: 0 1em;box-sizing: border-box; text-align: center;}
