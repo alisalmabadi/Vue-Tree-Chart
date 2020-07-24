@@ -1,6 +1,6 @@
 {
   "name": "vue-tree-chart-2",
-  "version": "1",
+  "version": "1.1",
   "description": "A vue2 component to display tree chart",
   "author": "refined-x [tower1229@foxmail.com]",
   "main": "./dist/TreeChart.common.js",
@@ -45,5 +45,7 @@
   "directories": {
     "doc": "docs"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
