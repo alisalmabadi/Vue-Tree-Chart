@@ -9,7 +9,8 @@
     "url": "git+https://github.com/alisalmabadi/Vue-Tree-Chart.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "keywords": [
     "vue",
