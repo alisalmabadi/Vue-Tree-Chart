@@ -6,7 +6,7 @@
   "main": "./dist/TreeChart.common.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tower1229/Vue-Tree-Chart.git"
+    "url": "git+https://github.com/alisalmabadi/Vue-Tree-Chart.git"
   },
   "files": [
     "dist"
@@ -18,7 +18,7 @@
     "tree chart"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/tower1229/Vue-Tree-Chart/blob/master/README.md",
+  "homepage": "https://github.com/alisalmabadi/Vue-Tree-Chart/blob/master/README.md",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
