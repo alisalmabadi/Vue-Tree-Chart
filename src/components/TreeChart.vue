@@ -100,7 +100,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .childLevel:first-child.childLevel:last-child::after{left:auto;border-radius: 0;border-color:transparent #ccc transparent transparent;transform: translate3d(1px,0,0)}
 
 .node{position: relative; display: inline-block;margin: 0 1em;box-sizing: border-box; text-align: center;}
-.node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
+.node .person{position: relative; display: inline-block;z-index: 2;width:10em; overflow: hidden;}
 .node .person .avat{display: block;width:4em;height: 4em;margin:auto;overflow:hidden; background:#fff;border:1px solid #ccc;box-sizing: border-box;}
 .node .person .avat img{width:100%;height: 100%;}
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
